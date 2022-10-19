@@ -3,9 +3,8 @@ import "./Main.scss";
 import BeerCards from '../../components/BeerCards/BeerCards';
 
 const Main = (props) => {
-    const {title, beersArr} = props;
+    const {beersArr} = props;
     console.log ({beersArr});
-    console.log ({title});
 
 
   return (
