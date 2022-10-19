@@ -1,0 +1,12 @@
+.app-title {
+  color: darkred;
+  border: 1px solid blue;
+  text-align: center;
+}
+
+.card-container {
+  border: 2px solid darkblue;
+  border-radius: 15px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
