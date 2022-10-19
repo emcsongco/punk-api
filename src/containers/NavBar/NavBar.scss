@@ -1,0 +1,23 @@
+.navbar-options {
+    border: 2px solid blue;
+    text-align: left;    
+    font-style: italic;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    min-width:150px;
+
+    .navbar-options__filter {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .navbar-options__filter-item {
+        font-style: italic;
+    }
+}
+
+
+
+
+

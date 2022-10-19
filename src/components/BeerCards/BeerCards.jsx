@@ -7,12 +7,16 @@ const BeerCards = (props) => {
     console.log(beersArr);
 
     const cardListJSX = beersArr.map((beer, idx) => (
-        <img
-            className="beer-card___img"
-            src={beer.image_url}
-            alt={beer.name}
-            key={title+(idx+1)}
-        />
+        <div className="beer-card" >
+          <img
+              className="beer-card__img"
+              src={beer.image_url}
+              alt={beer.name}
+              key={title+(idx+1)}
+          />
+          <h4 className="beer-name">{beer.name}</h4>
+          <p className="beer-desc">{beer.description}</p>
+        </div>
     ));
     console.log(cardListJSX);
   return (

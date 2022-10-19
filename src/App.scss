@@ -1,12 +1,29 @@
-.app-title {
-  color: darkred;
-  border: 1px solid blue;
-  text-align: center;
+.app-container {
+  display:flex;
+  align-content:space-between;
 }
 
+.app-title {
+  color: darkred;
+  text-align: center;  
+}
+
+.navbar {
+  color: darkslategray;
+  text-align: center;  
+}
+
+.main {
+  text-align: center;
+  margin: 20px;
+}
+  
 .card-container {
-  border: 2px solid darkblue;
+  justify-content: center;
+  border: 2px solid blue;
   border-radius: 15px;
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  height:fit-content;
+  margin:auto;
+  padding: 15px; 
+  max-width:1200px;
 }

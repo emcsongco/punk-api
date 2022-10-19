@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import beers from './data/beers';
 import Main from './containers/Main/Main';
+import NavBar from './containers/NavBar/NavBar';
 
 
 const App = () => {
@@ -11,21 +12,16 @@ const App = () => {
   return (
     <>
       <h1 className="app-title">Beer Catalogue</h1>
-
-      <nav className="navbar">
-        <div className="navbar-options">
-          <h2 className="navbar-options__search">Search...</h2>
-          <h2 className="navbar-options__filter">Filter:</h2>
-            <ul><input type="checkbox" />filter #1</ul>
-            <ul><input type="checkbox" />filter #2</ul>
-            <ul><input type="checkbox" />filter #3</ul>
-        </div>
-      </nav>
-      <main className="main">
-        <div className="card-container">
-          <Main title="Explore" beersArr={beersArr}/>
-        </div>
-      </main>
+      <div className="app-container">      
+        <nav className="navbar">
+          <NavBar />
+        </nav>
+        <main className="main">
+          <div className="card-container">
+            <Main title="Explore" beersArr={beersArr}/>
+          </div>
+        </main>
+      </div>
     </>
   )
 }
