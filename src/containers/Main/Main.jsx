@@ -1,16 +1,22 @@
 import React from 'react';
 import "./Main.scss";
+import BeerCards from '../../components/BeerCards/BeerCards';
 
 const Main = (props) => {
-    const {beersArr} = props;
-    const localBeersArr = {beersArr};
-    console.log (localBeersArr);
+    const {title, beersArr} = props;
+    console.log ({beersArr});
+    console.log ({title});
+
 
   return (
     <>
-    <h2>{localBeersArr.name}</h2>    
-    
-    </>
+    <section className="cards-list">
+      <h2 className="cards-list__heading">Explore Catalog</h2>
+      <div className="all-beers">
+        <BeerCards beersArr={beersArr.slice(0,beersArr.length)}/>
+      </div>
+    </section>
+    </>    
   )
 }
 

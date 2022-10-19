@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.scss';
 import beers from './data/beers';
-
+import Main from './containers/Main/Main';
 
 
 const App = () => {
   const beersArr = beers
     .filter((beer) => beer.name);
-    // .map((beer) => beer.name);
   
   return (
     <>
@@ -24,14 +23,8 @@ const App = () => {
       </nav>
       <main className="main">
         <div className="card-container">
-          <h1 className="beer-name">{beersArr[0].name}</h1>
-          <h2 className="beer-tagline">{beersArr[0].tagline}</h2>
-          <p className="beer-desc">{beersArr[0].description}</p>
-          <img className="beer-img" src={beersArr[0].image_url} alt={beersArr[0].name} />
-          <h3 className= "beer-label">Brewer's Tips:</h3>
-          <p className = "beer-tips">{beersArr[0].brewers_tips}</p>
+          <Main title="Explore" beersArr={beersArr}/>
         </div>
-
       </main>
     </>
   )
