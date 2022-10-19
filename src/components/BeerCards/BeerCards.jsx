@@ -16,6 +16,8 @@ const BeerCards = (props) => {
           />
           <h4 className="beer-name">{beer.name}</h4>
           <p className="beer-desc">{beer.description}</p>
+          <h6>ABV: {beer.abv}-----First Brewed In: {beer.first_brewed}-----PH: {beer.ph}</h6>
+
         </div>
     ));
     console.log(cardListJSX);
