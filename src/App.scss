@@ -1,3 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Fredoka+One&family=Fuzzy+Bubbles&family=Inspiration&family=Monoton&family=Montserrat:wght@100&family=Oswald:wght@200&family=Poller+One&family=Source+Sans+Pro:wght@300&family=Syncopate&family=Work+Sans&display=swap');
+
+$font-family1: 'DynaPuff', cursive;
+$font-family2: 'Fredoka One', cursive;
+$font-family3: 'Fuzzy Bubbles', cursive;
+$font-family4: 'Inspiration', cursive;
+$font-family5: 'Monoton', cursive;
+$font-family6: 'Montserrat', sans-serif;
+$font-family7: 'Oswald', sans-serif;
+$font-family8: 'Poller One', cursive;
+$font-family9: 'Source Sans Pro', sans-serif;
+$font-family10: 'Syncopate', sans-serif;
+$ont-family11: 'Work Sans', sans-serif;
+
 .app-container {
   display:flex;
   align-content:space-between;
@@ -5,7 +20,11 @@
 
 .app-title {
   color: darkred;
-  text-align: center;  
+  text-align: center;
+  font-family: $font-family5; 
+  font-size:80px;
+  font-weight:lighter; 
+  text-shadow:2px 2px lightslategray;
 }
 
 .navbar {
