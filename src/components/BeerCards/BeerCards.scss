@@ -3,6 +3,7 @@
 .beer-cards {
     align-self: center;
     min-width: 200px;
+    color:lightgray;
     
     .beer-card {
         border: 4px ridge $color-yellow;
@@ -16,17 +17,15 @@
 
         .beer-name {
             font-family:$font-family10;
-            font-size:1.25vw;
             padding: 0 5px 0 5px;
+            // background-color: lightblue;
         }
         .beer-tagline {
-            font-size:18px;
+            font-size:16px;
             font-style: italic;
         }
         .beer-card__img {
             background-color: transparent;
-            height:380px;
-            width: 100%;
             margin:auto;
         }
         .beer-stats {
@@ -47,16 +46,17 @@
             }
         }
         .beer-desc {
-            font-size: 16px;
+            font-size: 12px;
             color: black;
             text-align:center;
             padding:0px 10px 0px 10px;
             font-family: $font-family11;
+            color:lightgray;
         }
     }
 }
 
-@media screen and (max-width:400px) {      
+@media screen and (max-width:800px) {      
     .beer-cards {
         display:flex;
         flex-direction: column;
@@ -64,6 +64,17 @@
         height:auto;
         text-align: center;
         gap: 10px;
+
+        .beer-card{
+            font-size:3.25vw;
+            .beer-name {
+                margin:auto;
+            }
+            .beer-card__img {
+                height:240px;
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -86,14 +97,21 @@
         flex-direction: column;
         justify-content: flex-start;
         text-align: center;
-        height:100px;
+        height:65px;
         font-family: $font-family8;
         padding:0px 10px 0px 10px;
+        font-size:1vw;
     }
     .beer-tagline {
         text-align: center;
         padding:0px 10px 0px 10px;
-        height:60px;
+        height:55px;
+    }
+    .beer-card__img {
+        background-color: transparent;
+        height:180px;
+        width: 100%;
+        margin:auto;
     }
     .beer-desc {
         padding-bottom:200px;

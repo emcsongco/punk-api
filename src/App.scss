@@ -44,12 +44,10 @@
     
   .card-container {
     justify-content: center;
-    // border: 2px solid blue;
-    border-radius: 15px;
-    height:fit-content;
-    margin:auto;
+    border: 7px outset $color-darkgreen;
+    border-radius: 3px;
+    // margin:auto;
     padding: 15px; 
     max-width:1300px;
-    box-shadow: 5px 5px $color-darkblue;
   }
 }
