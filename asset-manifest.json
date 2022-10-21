@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/punkbeerapi/static/css/main.61d42d08.css",
+    "main.js": "/punkbeerapi/static/js/main.3e8dcf47.js",
+    "static/js/787.d49f1815.chunk.js": "/punkbeerapi/static/js/787.d49f1815.chunk.js",
+    "index.html": "/punkbeerapi/index.html",
+    "main.61d42d08.css.map": "/punkbeerapi/static/css/main.61d42d08.css.map",
+    "main.3e8dcf47.js.map": "/punkbeerapi/static/js/main.3e8dcf47.js.map",
+    "787.d49f1815.chunk.js.map": "/punkbeerapi/static/js/787.d49f1815.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61d42d08.css",
+    "static/js/main.3e8dcf47.js"
+  ]
+}
