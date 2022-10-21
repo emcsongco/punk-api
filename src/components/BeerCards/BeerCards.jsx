@@ -8,15 +8,23 @@ const BeerCards = (props) => {
 
     const cardListJSX = beersArr.map((beer, idx) => (
         <div className="beer-card" >
-          <img
-              className="beer-card__img"
-              src={beer.image_url}
-              alt={beer.name}
-              key={title+(idx+1)}
-          />
-          <h4 className="beer-name">{beer.name}</h4>
+          <h2 className="beer-name">{beer.name}</h2>
+          <p className="beer-tagline">"{beer.tagline}"</p>
+          <div className="beer-imgbox">
+            <img
+                className="beer-card__img"
+                src={beer.image_url}
+                alt={beer.name}
+                key={title+(idx+1)}
+            />
+          </div>
+          <div className="beer-stats">
+            <div className="stat-item">ABV: {beer.abv}</div>
+            <div className="stat-item">First Brewed In: {beer.first_brewed}</div>
+            <div className="stat-item">PH: {beer.ph}</div>
+          </div>
           <p className="beer-desc">{beer.description}</p>
-          <h6>ABV: {beer.abv}-----First Brewed In: {beer.first_brewed}-----PH: {beer.ph}</h6>
+          
 
         </div>
     ));

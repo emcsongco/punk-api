@@ -1,0 +1,7 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.cards-list__heading {
+    text-align:center;
+    font-family:$font-family10;
+    font-size: 36px;
+}

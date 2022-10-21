@@ -10,7 +10,7 @@ const Main = (props) => {
   return (
     <>
     <section className="cards-list">
-      <h2 className="cards-list__heading">Explore Catalog</h2>
+      <h2 className="cards-list__heading">Explore</h2>
       <div className="all-beers">
         <BeerCards title="Explore" beersArr={beersArr.slice(0,beersArr.length)}/>
       </div>

@@ -13,12 +13,15 @@
     margin: 20px 0;
     padding: 10px;
     font-size: 18px;
-    border: 5px $color-grey solid;
+    border: 5px $color-yellow solid;
+    background-color: lightyellow;
+
     border-radius: 15px;
     color: $color-black;
 
     &:focus {
-      border: 5px $color-primary solid;
+      // border: 5px $color-primary solid;
+      border: 5px $color-yellow solid;
       outline: none;
     }
   }
