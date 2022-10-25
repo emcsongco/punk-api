@@ -1,0 +1,27 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+
+.page-display {
+  text-align: center;
+  display:flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: -40px;
+    &__heading {
+      padding: 0px 50px;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  
+  @media screen and (min-width: 992px) {
+    .page-display {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px 1150px;
+      padding: 0px 50px;
+      margin-top: -40px;
+    }
+  }

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './App.scss';
-// import beers from './data/beers';
 import Main from './containers/Main/Main';
 import NavBar from './containers/NavBar/NavBar';
 
@@ -21,27 +20,20 @@ const App = () => {
 
   const url = "https://api.punkapi.com/v2/beers";
   const [beerArr,SetBeerArr] = useState([]);
-  const [pageCtr,SetPageCtr] = useState(1);
-  const [perPageCtr,SetperPageCtr] = useState(80);
-
-  // useEffect(() => {
-  //   getBeers();
-  //   },[]
-  // );
-
-  // const getBeers = async () => {
-  //   const res = await fetch (url);
-  //   const data = await res.json();
-  //   const beers = data.filter((beer) => beer.name);
-  //   SetBeerArr(beers);
-  //   console.log (beers);
-  //   console.log (beerArr);
-  //  }
+  let [pageCtr,SetPageCtr] = useState(1);
+  const [perPageCtr,SetPerPageCtr] = useState(80);
+  console.log (pageCtr);
+  console.log (perPageCtr);
 
   useEffect(() => {
     getBeersByPage();
-    },[]
+    },[pageCtr]
   );
+
+  // useEffect(() => {
+  //   getBeersByPage();
+  //   },[]
+  // );
 
    const getBeersByPage = async () => {
     let res = await fetch (`${url}?page=${pageCtr}&per_page=${perPageCtr}`);
@@ -50,6 +42,7 @@ const App = () => {
     SetBeerArr(beers);
     console.log (beers);
     console.log (beerArr);
+    console.log (res);
    }
 
    const beersArr = beerArr.filter((beer) => {
@@ -62,15 +55,6 @@ const App = () => {
   });
 
 // ===========================================================
-  
-  // const beersArr = beers.filter((beer) => {
-  //   const beersNameLower = beer.name.toLowerCase();
-
-  //   return beersNameLower.includes(searchTerm)
-  //        && (filterArr[0].checked ? beer.abv > 6: true )
-  //        && (filterArr[1].checked ? beer.first_brewed.substr(3,6) < 2010: true )
-  //        && (filterArr[2].checked ? beer.ph < 4: true )
-  // });
 
   const toggleCheckedFilter = (filterId) => {
     const updatedFilterArr = filterArr.map(filter => 
@@ -99,7 +83,7 @@ const App = () => {
         </nav>
         <main className="main">
           <div className="card-container">
-            <Main title="Explore" beersArr={beersArr}/>
+            <Main title="Explore" beersArr={beersArr} pageCtr={pageCtr} perPageCtr={perPageCtr}/>
           </div>
         </main>
       </div>
