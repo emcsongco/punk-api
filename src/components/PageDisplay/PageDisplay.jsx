@@ -15,7 +15,6 @@ const PageDisplay = (props) => {
             onClick={handleDecrement}
             className="page-display__arrow page-display__arrow--left"
           />
-          {/* <img src={beerImage} className="beer-image"/> */}
           <img 
             src={rightArrow}
             alt="right arrow"

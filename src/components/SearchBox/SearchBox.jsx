@@ -4,6 +4,7 @@ const SearchBox = (props) => {
   const { label, searchTerm, handleInput } = props;
 
   const capitalizedLabel = label[0].toUpperCase() + label.slice(1);
+  console.log(capitalizedLabel);
 
   return (
     <form className="search-box">

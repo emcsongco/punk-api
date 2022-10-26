@@ -1,19 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./NavBar.scss";
 import FilterList from '../../components/FilterList/FilterList';
-import beers from "../../data/beers";
 import SearchBox from '../../components/SearchBox/SearchBox';
-import beerImage from "../../assets/images/beer-pin.jpg";
-
-console.log (beers);
-
-const filtersList = [
-  "ABV value > 6%",
-  "Classic Range",
-  "Acidic (pH < 4)",
-];
-
-console.log (filtersList);
 
 const NavBar = (props) => {
     
@@ -43,7 +31,6 @@ const NavBar = (props) => {
                 handleInput={handleInput}
             />
             {filterJSX}
-            <img src="beerImage" alt="" />
         </div>
     </>
   )

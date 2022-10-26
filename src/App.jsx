@@ -5,11 +5,12 @@ import NavBar from './containers/NavBar/NavBar';
 
 const App = () => {
 // ===========================================================
-  
+// vars, useStates
+
   const filtersList = [
-    {id: 1, text: "High ABV > 6%", checked: false, field: "abv", operator: ">", value: 6 },
-    {id: 2, text: "Classic Range (< 2010)", checked: false, field: "first_brewed", operator: "<", value: 2010 },
-    {id: 3, text: "Acidic (ph < 4)", checked: false, field: "ph", operator: "<", value: 4 },
+    {id: 1, text: "High ABV > 6%", checked: false},
+    {id: 2, text: "Classic Range (< 2010)", checked: false},
+    {id: 3, text: "Acidic (ph < 4)", checked: false},
   ];
 
   const [searchTerm, setSearchTerm] = useState([]);
@@ -20,20 +21,15 @@ const App = () => {
 
   const url = "https://api.punkapi.com/v2/beers";
   const [beerArr,SetBeerArr] = useState([]);
-  let [pageCtr,SetPageCtr] = useState(1);
+  const [pageCtr,SetPageCtr] = useState(1);
   const [perPageCtr,SetPerPageCtr] = useState(80);
   console.log (pageCtr);
   console.log (perPageCtr);
 
   useEffect(() => {
     getBeersByPage();
-    },[pageCtr]
+    },[]
   );
-
-  // useEffect(() => {
-  //   getBeersByPage();
-  //   },[]
-  // );
 
    const getBeersByPage = async () => {
     let res = await fetch (`${url}?page=${pageCtr}&per_page=${perPageCtr}`);
@@ -61,6 +57,7 @@ const App = () => {
        filter.id === filterId ? {...filter, checked: !filter.checked} : {...filter}
       )
     updateFilterArr (updatedFilterArr)
+    console.log (updatedFilterArr);
   }
 
   const handleInput = (event) => {

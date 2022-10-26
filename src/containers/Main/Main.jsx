@@ -1,18 +1,24 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import "./Main.scss";
 import BeerCards from '../../components/BeerCards/BeerCards';
 import PageDisplay from '../../components/PageDisplay/PageDisplay';
 
 const Main = (props) => {
-    const { beersArr, pageCtr, perPageCtr } = props;
+    const { beersArr} = props;
     let [countStart,SetCountStart] = useState(0);
     let [countEnd,SetCountEnd] = useState(8);
 
     console.log ({beersArr});
     console.log (countStart);
     console.log (countEnd);
-    console.log (pageCtr);
-    console.log (perPageCtr);
+
+    useEffect(() => initSlice(), [beersArr]);
+    console.log(beersArr)
+  
+    const initSlice = () => {
+      SetCountStart(0);
+      SetCountEnd(8);
+    }
 
     const handleIncrement = () => {
       if(countStart === 72) {
@@ -28,7 +34,7 @@ const Main = (props) => {
   
     const handleDecrement = () => {
       if (countStart === 0) {
-        SetCountEnd(perPageCtr);
+        SetCountEnd(80);
         SetCountStart(72); 
       } else {
         SetCountStart(countStart - 8);
